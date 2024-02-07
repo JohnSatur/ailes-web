@@ -1,0 +1,125 @@
+.footer {
+    padding-block: 3rem 2rem;
+    overflow: hidden;
+    background-color: var(--black-color);
+}
+
+.footer__container {
+    position: relative;
+    row-gap: 3rem;
+}
+
+.footer__logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    margin-bottom: 1rem;
+
+    img {
+        height: 5rem;
+    }
+}
+
+.footer__data {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.footer__title {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.footer__links {
+    display: grid;
+    row-gap: .75rem;
+}
+
+.footer__link {
+    color: var(--text-color);
+
+    &:hover {
+        color: var(--light-title-color);
+    }
+}
+
+.footer__social {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.footer__social-link {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    transition: transform .4s, color .4s;
+
+    &:hover {
+        color: var(--light-title-color);
+        transform: translateY(-.25rem);
+    }
+}
+
+.footer__copy {
+    display: block;
+    margin-top: 7rem;
+    text-align: center;
+    font-size: var(--small-font-size);
+    color: var(--light-text-color);
+}
+
+@media screen and (max-width: 445px) {
+    .footer__data {
+        grid-template-columns: max-content;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .footer__data {
+        grid-template-columns: repeat(3, max-content);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer__data {
+        grid-template-columns: repeat(4, max-content);
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    
+    .footer {
+        position: relative;
+        padding-block: 5rem 3rem;
+    }
+
+    .footer__container {
+        position: initial;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+    }
+
+    .footer__logo {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer__data {
+        column-gap: 4.5rem;
+    }
+
+    .footer__title {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer__social {
+        column-gap: 1.25rem;
+    }
+
+    .footer__social-link {
+        font-size: 1.5rem;
+    }
+}

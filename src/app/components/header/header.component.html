@@ -1,0 +1,40 @@
+<header class="header blur-header shadow-header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo">
+            <img src="../../../assets/img/logo-ailes.png" alt="Logo AILES">
+        </a>
+
+        <div class="nav__menu" id="nav-menu" [ngClass]="{'show-menu': showMenu}">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#header" class="nav__link" (click)="toggleNavbar()">HOME</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link" (click)="toggleNavbar()">ABOUT US</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link" (click)="toggleNavbar()">UNIVERSITIES</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link" (click)="toggleNavbar()">BOARD</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link" (click)="toggleNavbar()">EVENTS</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link" (click)="toggleNavbar()">CONTACT</a>
+                </li>
+            </ul>
+
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close" (click)="toggleNavbar()">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav-toggle" (click)="toggleNavbar()">
+            <i class="ri-apps-2-fill"></i>
+        </div>
+    </nav>
+</header>
