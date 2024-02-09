@@ -1,0 +1,68 @@
+// Hero section
+.hero {
+    position: relative;
+    min-height: 40vh;
+    background-image: url(../../../assets/img/bg-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__container {
+    position: relative;
+}
+
+.hero__title {
+    font-size: var(--biggest-font-size);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+}
+
+// Privacy text
+.privacy__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-block: 2rem 3rem;
+}
+
+.privacy__content {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.privacy__title {
+    color: var(--black-color);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+    font-family: var(--second-font);
+}
+
+.privacy__paragraph {
+    color: var(--dark-text-color);
+    line-height: 1.625;
+}
+
+// Breakpoints
+@media screen and (min-width: 768px) {
+    .hero {
+        min-height: 50vh;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .hero {
+        background-position: top;
+    }
+}
