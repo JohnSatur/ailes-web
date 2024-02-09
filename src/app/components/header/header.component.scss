@@ -44,6 +44,7 @@
     font-family: var(--second-font);
     transition: color .4s;
     position: relative;
+    cursor: pointer;
 
     &::after {
         content: '';

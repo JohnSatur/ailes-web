@@ -1,0 +1,5 @@
+<swiper-container class="universities__carousel" slides-per-view="3" autoplay-delay="2000" autoplay-disable-on-interaction="false" space-between="50">
+    <swiper-slide class="universities__logo" *ngFor="let image of sliderImages">
+        <img [src]="image.imgUrl" [alt]="image.altTag">
+    </swiper-slide>
+</swiper-container>

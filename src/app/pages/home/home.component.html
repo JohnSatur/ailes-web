@@ -1,0 +1,98 @@
+<main>
+    <!-- Hero -->
+    <section class="home">
+        <div class="overlay"></div>
+        <div class="home__container container">
+            <div class="home__data">
+                <h2 class="home__subtitle ngsReveal">Inspiring Excellence,<br>Fostering Global Leadership.</h2>
+                <h1 class="home__title">
+                    International Association of Higher Education Leaders
+                </h1>
+                <p class="home__description">We believe in the power of education to shape a brighter future. As the International Association of Leaders in Higher Education, our mission is to unite visionary leaders from around the globe, fostering collaboration and driving excellence in higher education.</p>
+
+                <a href="#intro" class="home__button">About Us</a>
+            </div>
+            <div class="home__images">
+                <div class="home__circle"></div>
+
+                <div class="home__swiper">
+                    <div>
+                        <article class="home__article">
+                            <img src="../../../assets/img/logo-ailes-anim.gif" alt="Imagotipo AILES" class="home__img">
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="home__social">
+                <a href="http://facebook.com" target="_blank" class="home__social-link">
+                    <i class="ri-facebook-box-fill"></i>
+                </a>
+                <a href="http://instagram.com" target="_blank" class="home__social-link">
+                    <i class="ri-instagram-fill"></i>
+                </a>
+                <a href="http://youtube.com" target="_blank" class="home__social-link">
+                    <i class="ri-youtube-fill"></i>
+                </a>
+                <a href="http://youtube.com" target="_blank" class="home__social-link">
+                    <i class="ri-twitter-fill"></i>
+                </a>
+                <a href="http://youtube.com" target="_blank" class="home__social-link">
+                    <i class="ri-linkedin-fill"></i>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Introducción -->
+    <section class="intro section" id="intro">
+        <div class="intro__container container">
+            <div class="intro__image">
+                <img src="../../../assets/img/bg-2.jpg" alt="Miembros de AILES" srcset="" class="intro__img">
+            </div>
+            <div class="intro__text">
+                <h2 class="intro__title">We drive educational progress through inspiration and commitment, <span class="intro__title-color">connecting leaders in higher education in a global network of excellence</span>.</h2>
+
+                <div class="intro__copy">
+                    <p class="intro__paragraph">Welcome to the <b>International Association of Leaders in Higher Education</b> (AILES), where our commitment to advancing academic excellence knows no borders. At AILES, we are a global community of <b>visionary leaders</b>, <b>educators</b>, and <b>institutions</b> dedicated to shaping the future of higher education.</p>
+                    <p class="intro__paragraph">AILES is more than an association; it's a <b>catalyst for positive change in the realm of higher education</b>. Comprised of forward-thinking leaders and institutions from around the world, we foster collaboration, innovation, and inclusivity.</p>
+                    <p class="intro__paragraph">AILES provides a unique platform for <b>networking among leaders</b>, fostering connections that transcend geographical constraints.</p>
+                    <p class="intro__paragraph"><b>Thank you for being a part of AILES</b>, where leadership, innovation, and global collaboration converge for the advancement of higher education.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel universidades -->
+    <section class="universities section">
+        <div class="universities__container container">
+            <app-carousel></app-carousel>
+        </div>
+    </section>
+
+    <!-- Misión y visión -->
+    <section class="mission section">
+        <div class="overlay"></div>
+        <div class="mission__container container">
+            <div class="card__container">
+                <app-card-icon [icon]="cardMission.icon" [title]="cardMission.title" [description]="cardMission.description"></app-card-icon>
+
+                <app-card-icon [icon]="cardVision.icon" [title]="cardVision.title" [description]="cardVision.description"></app-card-icon>
+            </div>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section class="blog section">
+        <div class="blog__container">
+            <div class="blog__heading">
+                <h2 class="blog__title">AILES Blog</h2>
+                <a href="#" target="_blank" class="blog__link" rel="noopener noreferrer">Ir al blog</a>
+            </div>
+
+            <div class="blog__cards">
+                <app-blog-card *ngFor="let blogCard of blogCards" [imgUrl]="blogCard.imgUrl" [date]="blogCard.date" [title]="blogCard.title" [summary]="blogCard.summary"></app-blog-card>                
+            </div>
+        </div>
+    </section>
+</main>

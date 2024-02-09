@@ -7,10 +7,10 @@
         <div class="nav__menu" id="nav-menu" [ngClass]="{'show-menu': showMenu}">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="#header" class="nav__link" (click)="toggleNavbar()">HOME</a>
+                    <a routerLink="home" class="nav__link" (click)="toggleNavbar()">HOME</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link" (click)="toggleNavbar()">ABOUT US</a>
+                    <a routerLink="about" class="nav__link">ABOUT US</a>
                 </li>
                 <li class="nav__item">
                     <a href="#" class="nav__link" (click)="toggleNavbar()">UNIVERSITIES</a>
