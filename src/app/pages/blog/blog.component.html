@@ -1,0 +1,15 @@
+<!-- Hero -->
+<section class="hero" [style.background-image]="'url(' + headerService.uiData().thumbnail + ')'">
+    <div class="overlay"></div>
+    <div class="hero__container container">
+        <h1 class="hero__title">{{ headerService.uiData().title }}</h1>
+        <h2 class="hero__subtitle">{{ headerService.uiData().subtitle }}</h2>
+    </div>
+</section>
+
+<!-- Blog Posts -->
+<section class="posts">
+    <div class="posts__container container">
+        <app-post-card *ngFor="let post of posts" [postPreview]="post"></app-post-card>
+    </div>
+</section>

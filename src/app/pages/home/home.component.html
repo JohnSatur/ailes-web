@@ -4,10 +4,8 @@
         <div class="overlay"></div>
         <div class="home__container container">
             <div class="home__data">
-                <h2 class="home__subtitle ngsReveal">Inspiring Excellence,<br>Fostering Global Leadership.</h2>
-                <h1 class="home__title">
-                    International Association of Higher Education Leaders
-                </h1>
+                <h2 class="home__subtitle">Inspiring excellence,<br>fostering global leadership.</h2>
+                <h1 class="home__title">International Association of Higher Education Leaders</h1>
                 <p class="home__description">We believe in the power of education to shape a brighter future. As the International Association of Leaders in Higher Education, our mission is to unite visionary leaders from around the globe, fostering collaboration and driving excellence in higher education.</p>
 
                 <a href="#intro" class="home__button">About Us</a>
@@ -87,11 +85,11 @@
         <div class="blog__container">
             <div class="blog__heading">
                 <h2 class="blog__title">AILES Blog</h2>
-                <a href="#" target="_blank" class="blog__link" rel="noopener noreferrer">Ir al blog</a>
+                <a href="#" target="_blank" class="blog__link" rel="noopener noreferrer">Read blog</a>
             </div>
 
             <div class="blog__cards">
-                <app-blog-card *ngFor="let blogCard of blogCards" [imgUrl]="blogCard.imgUrl" [date]="blogCard.date" [title]="blogCard.title" [summary]="blogCard.summary"></app-blog-card>                
+                <app-post-card *ngFor="let postCard of postCards" [postPreview]="postCard"></app-post-card>                
             </div>
         </div>
     </section>
