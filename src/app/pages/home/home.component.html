@@ -5,7 +5,7 @@
         <div class="home__container container">
             <div class="home__data">
                 <h2 class="home__subtitle">Inspiring excellence,<br>fostering global leadership.</h2>
-                <h1 class="home__title">International Association of Higher Education Leaders</h1>
+                <h1 class="home__title page-title">International Association of Higher Education Leaders</h1>
                 <p class="home__description">We believe in the power of education to shape a brighter future. As the International Association of Leaders in Higher Education, our mission is to unite visionary leaders from around the globe, fostering collaboration and driving excellence in higher education.</p>
 
                 <a href="#intro" class="home__button">About Us</a>
@@ -73,8 +73,10 @@
         <div class="overlay"></div>
         <div class="mission__container container">
             <div class="card__container">
+                <!-- Card de misión -->
                 <app-card-icon [icon]="cardMission.icon" [title]="cardMission.title" [description]="cardMission.description"></app-card-icon>
 
+                <!-- Card de misión -->
                 <app-card-icon [icon]="cardVision.icon" [title]="cardVision.title" [description]="cardVision.description" class="app-card"></app-card-icon>
             </div>
         </div>
@@ -89,6 +91,7 @@
             </div>
 
             <div class="blog__cards">
+                <!-- Cards que se quieran mostrar en preview del blog -->
                 <app-post-card *ngFor="let postCard of postCards" [postPreview]="postCard" class="app-card">
             </app-post-card>
             </div>

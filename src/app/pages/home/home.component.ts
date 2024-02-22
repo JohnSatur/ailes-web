@@ -1,8 +1,10 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { CarouselComponent } from '../../components/carousel/carousel.component';
 import { CardIconComponent } from '../../components/card-icon/card-icon.component';
 import { PostCardComponent } from '../../components/post-card/post-card.component';
+
 import { PostPreview } from '../../types/post-preview.type';
 
 @Component({
@@ -11,22 +13,25 @@ import { PostPreview } from '../../types/post-preview.type';
   imports: [CommonModule, CarouselComponent, CardIconComponent, PostCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Swiper
 })
 export class HomeComponent{
 
+  // Datos de la card de misión
   public cardMission: CardIconComponent = {
     icon: 'ri-hand-heart-line',
     title: 'Mission',
     description: 'At AILES, our mission is to drive excellence and innovation in higher education worldwide. We are committed to bringing visionary educational leaders together and creating a collaborative environment where diversity, creativity, and academic quality thrive. We seek to foster the continuous development of higher education, empowering leaders to tackle global challenges and provide transformative educational experiences.'
   }
 
+  // Datos de la card de visión
   public cardVision: CardIconComponent = {
     icon: 'ri-crosshair-2-fill',
     title: 'Vision',
     description: 'Our vision at AILES is to forge a global educational future where quality and inclusion are the norm. We envision an educational landscape that transcends borders, driven by innovation and collaboration among passionate leaders. We strive to be the catalyzing force inspiring significant changes in higher education, building a legacy of excellence that endures through generations and shapes leaders capable of addressing tomorrow\'s challenges with vision and determination.'
   }
 
+  // Datos de las cards para la preview del blog
   public postCards: PostPreview[] = [
     {
       title: 'Honorary degree, Dr. Elva Cogorno de Verón',

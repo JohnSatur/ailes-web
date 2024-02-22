@@ -15,18 +15,9 @@
     position: relative;
 }
 
-.hero__title,
-.hero__subtitle {
-    color: var(--light-title-color);
-}
-
-.hero__title {
-    font-size: var(--biggest-font-size);
-    font-family: var(--second-font);
-}
-
 .hero__subtitle {
     font-size: var(--h2-font-size);
+    color: var(--light-title-color);
 }
 
 .overlay {

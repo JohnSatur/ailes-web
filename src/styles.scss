@@ -96,6 +96,12 @@ img {
     padding-block: 2rem 3rem;
 }
 
+.page-title {
+    font-size: var(--biggest-font-size);
+    font-family: var(--second-font);
+    color: var(--light-title-color);
+}
+
 @media screen and (min-width: 1152px) {
     .container {
         margin-inline: auto;
