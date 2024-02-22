@@ -1,12 +1,12 @@
 <article class="blog__card">
     <div class="blog__img">
-        <img [src]="'../../../assets/img/' + postPreview.thumbnail" [alt]="postPreview.title" class="blog__img">
+        <img [src]=postPreview.thumbnail [alt]="postPreview.title" class="blog__img">
     </div>
 
     <div class="blog__text">
-        <span class="blog__meta">{{ postPreview.publicationDate }}</span>
+        <span class="blog__meta">{{ postPreview.publicationDate | date: 'longDate' }}</span>
 
-        <a href="#" class="blog__card-title">{{ postPreview.title }}</a>
+        <a routerLink="blog/{{postPreview.slug}}" class="blog__card-title">{{ postPreview.title }}</a>
 
         <p class="blog__description">{{ postPreview.summary }}</p>
 

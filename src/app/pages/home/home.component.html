@@ -92,8 +92,7 @@
 
             <div class="blog__cards">
                 <!-- Cards que se quieran mostrar en preview del blog -->
-                <app-post-card *ngFor="let postCard of postCards" [postPreview]="postCard" class="app-card">
-            </app-post-card>
+                <app-post-card *ngFor="let post of posts" [postPreview]="post"></app-post-card>
             </div>
         </div>
     </section>

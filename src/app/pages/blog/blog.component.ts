@@ -22,7 +22,7 @@ export class BlogComponent implements OnInit {
   private uiData: HeaderData = {
     title: 'AILES Blog',
     subtitle: 'Explore the latest insights and updates in higher education.',
-    thumbnail: '../../../assets/img/bg-3.jpg'
+    thumbnail: '/assets/img/bg-4.jpg'
   };
 
   public posts: Array<PostPreview> = [ ];

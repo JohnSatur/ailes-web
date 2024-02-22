@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import matter from 'gray-matter-browser';
 import MarkdownIt from 'markdown-it';
+
 import { HeaderData, HeaderService } from '../../services/header.service';
 
 @Component({
@@ -15,8 +16,8 @@ import { HeaderData, HeaderService } from '../../services/header.service';
 })
 export class BlogPostComponent implements OnInit {
   private markdownIt = new MarkdownIt();
-  public content: string = '';
-  public thumbnail: string = '';
+  public content: string = ''; // Contenido del blog
+  public thumbnail: string = ''; // Url del thumbnail
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -25,6 +26,7 @@ export class BlogPostComponent implements OnInit {
   ) { }
   
   ngOnInit(): void {
+    // Slug de la ruta 
     const slug = this.activatedRoute.snapshot.paramMap.get('postId');
 
     this.http.get(`assets/posts/${slug}/post.md`, { responseType: 'text'}).subscribe({
@@ -45,6 +47,11 @@ export class BlogPostComponent implements OnInit {
     this.thumbnail = thumbnail;
   }
 
+  /**
+   * Método para enviar la información del header al servicio para renderizar en la plantilla.
+   * 
+   * @param headerData 
+   */
   public setHeaderData(headerData: HeaderData): void {
     this.headerService.uiData.set(headerData);
   }

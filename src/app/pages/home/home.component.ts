@@ -6,11 +6,19 @@ import { CardIconComponent } from '../../components/card-icon/card-icon.componen
 import { PostCardComponent } from '../../components/post-card/post-card.component';
 
 import { PostPreview } from '../../types/post-preview.type';
+import { HeaderService } from '../../services/header.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { forkJoin } from 'rxjs';
+import matter from 'gray-matter-browser';
+
+type BlogData = {
+  posts: Array<string>;
+};
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, CarouselComponent, CardIconComponent, PostCardComponent],
+  imports: [CommonModule, CarouselComponent, CardIconComponent, PostCardComponent, HttpClientModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA], // Swiper
@@ -55,4 +63,40 @@ export class HomeComponent{
       summary: 'On January 26th, we had the privilege of conferring the prestigious honorary title of Doctorate Honoris Causa in Educational Management upon the distinguished Dr. Elva Cogorno de Veron. We are delighted to highlight and applaud Dr. Cogorno de Veron\'s tireless dedication, whose commitment and passion have left an indelible mark on the educational field. Her hard work and remarkable achievements have significantly enriched the academic community, serving as a source of inspiration for present and future generations. On this special day, we extend our heartfelt congratulations to Dr. Elva Cogorno de Veron. Her Doctorate Honoris Causa is not only a well-deserved recognition but also a compelling testimony of her exceptional dedication and valuable contributions to educational management.'
     }
   ];
+
+  public posts: Array<PostPreview> = [ ];
+
+  constructor(public headerService: HeaderService, private http: HttpClient) { }
+
+  ngOnInit(): void {
+    const pathBlogData: string = 'assets/blog/blog-data.json';
+
+    this.http.get<BlogData>(pathBlogData).subscribe({
+      next: data => {
+        const requests = data.posts.map(slug =>
+          this.http.get(`assets/posts/${slug}/post.md`, {  responseType: 'text' })
+        )
+        forkJoin(requests).subscribe({
+          next: allPostDetails => {
+            this.posts = allPostDetails.map(markdownFile => {
+              const {
+                title = '',
+                slug = '',
+                publicationDate = '',
+                thumbnail = '',
+                summary = ''
+              } = matter(markdownFile).data;
+              return { title, slug, publicationDate , thumbnail, summary}
+            })
+          },
+          error: err => {
+            console.log(err);
+          }
+        })
+      },
+      error: err => {
+        console.log(err);
+      }
+    });
+  }
 }

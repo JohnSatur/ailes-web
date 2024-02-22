@@ -9,7 +9,7 @@ slug: 'honorary-degree-elva-cogorno'
 
 On January 26th, we had the privilege of conferring the prestigious honorary title of Doctorate Honoris Causa in Educational Management upon the distinguished Dr. Elva Cogorno de Veron.
 
-![Honorary degree - Elva Cogorno](../../../assets/posts/honorary-degree-elva-cogorno/post-img-1.jpg)
+![Honorary degree - Elva Cogorno](assets/posts/honorary-degree-elva-cogorno/post-img-1.jpg)
 
 We are delighted to highlight and applaud Dr. Cogorno de Veron's tireless dedication, whose commitment and passion have left an indelible mark on the educational field. Her hard work and remarkable achievements have significantly enriched the academic community, serving as a source of inspiration for present and future generations. On this special day, we extend our heartfelt congratulations to Dr. Elva Cogorno de Veron.
 
