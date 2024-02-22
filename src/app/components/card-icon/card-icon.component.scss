@@ -116,3 +116,18 @@
     filter: blur(24px);
     transition: transform .3s ease-in;
 }
+
+// Breakpoints
+@media screen and (max-width: 320px) {
+    .card__article {
+        padding: 2rem 1rem;
+    }
+
+    .card__scale-1 {
+        top: 2rem;
+    }
+
+    .card__scale-2 {
+        top: 3rem;
+    }
+}
